@@ -2,7 +2,7 @@
 
 mkdir /var/www/localhost
 
-cp localhost_index_on /etc/nginx/sites-available/localhost
+cp nginx.conf /etc/nginx/sites-available/localhost
 ln -s /etc/nginx/sites-available/localhost /etc/nginx/sites-enabled/
 
 # mv wordpress /var/www/localhost/wordpress
