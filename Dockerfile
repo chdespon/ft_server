@@ -1,18 +1,20 @@
-FROM debian:buster-slim
+FROM		debian:buster-slim
 
-RUN apt-get -y update && apt-get -y install mariadb-server \
-											wget \
-											php \
-											php-cli \
-											php-cgi \
-											php-mbstring \
-											php-fpm \
-											php-mysql \
-											nginx \
-											libnss3-tools
+RUN			apt-get -y update && apt-get -y install mariadb-server \
+													wget \
+													php \
+													php-cli \
+													php-cgi \
+													php-mbstring \
+													php-fpm \
+													php-mysql \
+													nginx \
+													libnss3-tools
 
-COPY srcs ./root/
+ENV			INDEX=on
 
-WORKDIR /root/
+COPY		srcs ./root/
 
-ENTRYPOINT ["bash", "container_entrypoint.sh"]
+WORKDIR		/root/
+
+ENTRYPOINT	["bash", "container_entrypoint.sh"]

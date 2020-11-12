@@ -1,0 +1,18 @@
+Commande pour build le container
+sudo docker build . -t le nom du container
+
+Commande pour lancer le container
+sudo docker run -it le nom du container
+
+Commande pour trouver l'adress du container une fois lancer
+sudo docker ps
+
+Commande pour executer des commande dans le container
+sudo docker exec l'adress du container
+
+Trouver l'ip du server dans le container
+
+sudo ip addr show eth0 | grep inet | awk '{ print $2; }' | sed 's/\/.*$//'
+
+Desactiver l'index
+Run le container avec -e INDEX=off
