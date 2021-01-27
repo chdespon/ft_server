@@ -8,7 +8,7 @@ ln -s /etc/nginx/sites-available/localhost /etc/nginx/sites-enabled/
 mv wordpress /var/www/localhost/wordpress
 mv phpMyAdmin /var/www/localhost/phpMyAdmin
 
-mkdir -p /var/www/localhost/wordpress/wp-content/uploads/2020/11\
+mkdir -p /var/www/localhost/wordpress/wp-content/uploads/2020/11
 mv images/fond-1.jpg images/logo-1.png /var/www/localhost/wordpress/wp-content/uploads/2020/11/
 
 service mysql start
